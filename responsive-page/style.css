@@ -1,7 +1,48 @@
+/* make header and footer into different colors and add padding */
+.header, .footer {
+    background-color: rgb(100, 163, 230);
+    padding: 1em;
+}
+.menu {
+    display: flex;
+}
+/*create space between menu list*/
+li {
+    padding-left: 90px;
+}
+/* remove lists/point form on menu*/
+.menu li {
+    list-style: none;
+    }
+
+/* Change the menu color to when hovering over a link*/
+.menu a:hover {
+    background-color : rgb(186, 252, 248);
+    }   
+/* shows more content when clicking/tapping on detail... on courses*/
 .hide {
     display: none
 }
 
 .more:hover + .hide {
     display: block;
+}
+
+/* make image round*/
+img {
+    border-radius: 50%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
 }
