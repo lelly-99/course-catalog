@@ -35,6 +35,7 @@ function courseCost(courseCode, startDateStr){
     let discountRate = 0;
     let courseCost = course.cost;
     let discount = 0;
+    let courseCosts = 0;
 
     if ( day >=20 && day <=25) {
         discountRate = 0.4      
@@ -44,7 +45,7 @@ function courseCost(courseCode, startDateStr){
 
     if (discountRate > 0) {
         discount = courseCost * discountRate;
-      	courseCost = course.cost - discount;
+      	courseCosts = course.cost - discount;
     }
   
     return {
@@ -52,7 +53,7 @@ function courseCost(courseCode, startDateStr){
         code: "r1",
 	    description : course.courseName,
 	    cost : course.cost,
-	    discount, 
-	    amountDue : courseCost
+	    discounts : discount,
+	    amountDue : courseCosts
     }
 }
